@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <title>Message Encryptor</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width; initial-scale=1">
+  <link rel="stylesheet" href="style/me-style.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <script src="script/text-encoder-lite.min.js" defer></script>
+  <script src="script/base64js.min.js" defer></script>
+  <script src="script/me-script.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1 class="page-title">Message Encryptor</h1>
+  </header>
+
+  <main>
+    <form action="#">
+      <div class="input-div flex-item">
+        <label for="msg-input">Message: </label>
+        <textarea id="msg-input" cols="45" rows="9" autofocus>Hello! This message is secret.</textarea>
+      </div>
+
+      <div class="flex-item">
+        <div class="input-div input-div-flex">
+          <label for="msg-pass">Message password: </label>
+          <input type="password" id="msg-pass" autocomplete="new-password">
+        </div>
+
+        <div class="crypt-btns">
+          <button id="encrypt-btn" type="submit" value="encrypt">Encrypt</button>
+          <button id="decrypt-btn" type="submit" value="decrypt">Decrypt</button>
+        </div>
+      </div>
+
+      <div class="output-div flex-item">
+        <label for="msg-output">Output:</label>
+        <output id="msg-output" for="msg-input msg-pass"></output>
+        <button type="button" id="copy-output" class="copy-btn" title="Copy output"><img
+            src="style/icon/clipboard-icon.svg" alt="clipboard icon"></button>
+      </div>
+    </form>
+  </main>
+
+  <footer>
+    <p>
+      Functionality has been tested on Firefox and Chrome. Safari and Opera will be tested next.
+      Edge support requires an alternate crypto API, but support may be added soon.
+    </p>
+    <p class="credits">Thanks to:</p>
+    <ul class="credits-list">
+      <li class="credits-list-item">MDN for the <a
+          href="https://github.com/mdn/dom-examples/tree/master/web-crypto">crypto examples</a>.</li>
+      <li class="credits-list-item"><a href="https://github.com/beatgammit/base64-js">base64-js</a> for the binary
+        encoding and decoding.</li>
+      <li class="credits-list-item"><a href="https://github.com/solderjs/TextEncoderLite">TextEncoderLite</a> for the
+        cross-browser text encoding and decoding.</li>
+      <li class="credits-list-item"><a href="https://material.io/resources/icons/">Material Icons</a> for all icons.
+      </li>
+      <li class="credits-list-item">
+        <a href="https://www.fontsquirrel.com/">Font Squirrel</a> for the webfont
+        kits for <a href="https://www.fontsquirrel.com/fonts/bpmono">BPmono</a>
+        and <a href="https://www.fontsquirrel.com/fonts/slabo">Slabo</a>.
+      </li>
+    </ul>
+    <p class="copyright">&copy; 2020 William Wager</p>
+  </footer>
+</body>
+
+</html>
